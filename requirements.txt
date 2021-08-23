@@ -1,3 +1,5 @@
 requests
 pytest
-faker
+Faker
+pytest-html
+black

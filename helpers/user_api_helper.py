@@ -1,5 +1,5 @@
 from user_management.requess import UsersRequested
-from user_management.events import UserCreated,UserUpdated,UserDeleted
+from user_management.events import UserCreated, UserUpdated, UserDeleted
 
 
 class UserAPIHelper:
@@ -22,4 +22,3 @@ class UserAPIHelper:
     def delete_user(cls, use_case, delete_key):
         user_deleted = UserDeleted(delete_key=delete_key)
         use_case.process_command(user_deleted)
-

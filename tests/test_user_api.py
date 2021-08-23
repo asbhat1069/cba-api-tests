@@ -1,4 +1,3 @@
-
 import logging as logger
 import pytest
 from helpers import TestHelper
@@ -56,7 +55,7 @@ class TestUsersAPI:
         """
         Test User Update. Get all users and verify user updation.
         """
-        updated_score = score+10
+        updated_score = score + 10
         TestHelper.update_user(self.user_api_use_case, username, score=updated_score)
         users = TestHelper.get_users(self.user_api_use_case)
         assert users, "No users returned though expected"
@@ -64,7 +63,9 @@ class TestUsersAPI:
         for user in users:
             if user["username"] == username:
                 found = True
-                assert user["score"] == updated_score, f"score not updated for user {username}"
+                assert (
+                    user["score"] == updated_score
+                ), f"score not updated for user {username}"
                 break
         if not found:
             pytest.fail(f"User {username} not found")

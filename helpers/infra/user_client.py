@@ -16,24 +16,16 @@ class UserAPIClient:
 
     def create_user(self, payload):
         headers = {"Content-Type": "application/json"}
-        return self.ses.post(
-            self.urls.user_url(), payload, headers=headers
-        ).json()
+        return self.ses.post(self.urls.user_url(), payload, headers=headers).json()
 
     def get_users(self):
         headers = {"accept": "application/json"}
-        return self.ses.get(
-            self.urls.user_url(), headers=headers
-        ).json()
+        return self.ses.get(self.urls.user_url(), headers=headers).json()
 
     def update_user(self, payload):
         headers = {"Content-Type": "application/json"}
-        return self.ses.put(
-            self.urls.user_url(), payload, headers=headers
-        )
+        return self.ses.put(self.urls.user_url(), payload, headers=headers)
 
     def delete_user(self, delete_key):
         headers = {"delete-key": delete_key}
-        return self.ses.delete(
-            self.urls.user_url(), headers=headers
-        )
+        return self.ses.delete(self.urls.user_url(), headers=headers)

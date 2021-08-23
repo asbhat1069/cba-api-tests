@@ -1,4 +1,3 @@
-
 BASIC_LOG_FORMAT = (
     "[%(asctime)s] {%(filename)25s:%(lineno)3d} %(levelname)6s - %(message)s"
 )

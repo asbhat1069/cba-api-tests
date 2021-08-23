@@ -56,4 +56,3 @@ class RESTClient:
         logger.info("Response Status Code : {}".format(res.status_code))
         res.raise_for_status()
         return res
-

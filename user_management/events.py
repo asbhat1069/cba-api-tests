@@ -4,10 +4,7 @@ class UserCreated:
         self.score = score
 
     def as_dict(self):
-        return {
-            "username": self.username,
-            "score": self.score
-        }
+        return {"username": self.username, "score": self.score}
 
 
 class UserUpdated(UserCreated):
